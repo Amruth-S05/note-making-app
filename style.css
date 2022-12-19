@@ -1,0 +1,20 @@
+.main-menu {
+	display: inline-grid;
+	grid-gap: 10px;
+	border: solid black 2px;
+	padding: 10px;
+	width: 40%;
+}
+
+p {
+	font-weight: bold;
+}
+button {
+	width: 100px;
+}
+
+.new-notes-box {
+	display:grid;
+	grid-template-columns: repeat(3, 1fr);
+  	gap: 10px;
+}
