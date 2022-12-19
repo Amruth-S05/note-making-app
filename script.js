@@ -99,13 +99,16 @@ btnInput.addEventListener('click', () => {
 
 			const updateDate = String(d.slice(1,15));
 
+			try{
+				newNote.removeChild(updateD);
+			}catch{}
+
 			const updateD = document.createElement('p');
-			if (updateD.textContent){
-				updateD.textContent = `Last edit on ${updateDate}`;
-			}else{
-				newNote.appendChild(updateD);
-			}
-		})
+			updateD.textContent = `Last edit on ${updateDate}`;
+
+			newNote.appendChild(updateD);
+			updateBox.innerHTML = '';
+		});
 
 	});
 	titleInput.focus();
